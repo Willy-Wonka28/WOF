@@ -1,0 +1,135 @@
+*{
+ margin: 0px;
+}
+:root{
+  --grey:rgb(99, 91, 91);
+}
+@keyframes flx {
+    from{
+    transform: rotate(0deg);
+    width: 450px;
+    height: 450px;
+    }  
+    to{
+      transition-property: transform;
+  transition-duration:100s;
+  transform: rotate(120deg);
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+}
+}
+@keyframes  get-out{
+  from{
+    height: 50px;
+    width:200px;
+  }
+  to{
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+  }
+}
+@keyframes pop {
+  0%{
+    width:0px;
+    height: 0px;
+  }
+  100%{
+    width: 700px;
+    height: 400px;
+  }
+   
+  }
+
+body{
+  background-color:rgb(51, 48, 48);
+}
+.hd{
+background-color:#096629;
+color: white;
+height: 100px;
+text-align: center;
+font-size: 70px;
+
+}
+
+.motto{
+    background-color:var(--grey);
+    color: white;
+    height: 40px;
+    text-align: center;
+    font-size: 25px;
+    }
+main{
+    display:flex;
+     justify-content: center;
+    align-items: center;
+}
+.btn{
+  background-color:#096629;
+  color: white;
+  border: solid 3px #043816;
+  border-radius: 3px;
+  height: 50px;
+  width:200px;
+  font-size: 35px;
+  font-family: 'Courier New', Courier, monospace;
+ position: absolute;
+ top: 240px;
+ right:130px;
+}
+.btn:hover{
+  animation:get-out 2s 0s;
+}
+.board:hover{
+  animation: flx 3s 0s;
+}
+.board{
+  border: solid 5px;
+ border-radius:225px;
+ border-color:var(--grey);;
+ margin-top:30px ;
+ margin-bottom: 30px;
+ width: 450px;
+ height: 450px;
+transform: rotate(0deg);
+
+}
+
+/* make the button stay down */
+/* .pop-up{
+  width: 700px;
+  height: 400px;
+  display: flex;
+  justify-content:;
+  align-items:;
+  background-color: aqua;
+  animation:pop ease-in 3s 1s; */
+}
+.over-board{
+ position: relative;
+}
+footer{
+  background-color: var(--grey);
+  color:white;
+  text-align: center;
+  height: 45px;
+}
+@media (max-width:500px){
+  .hd{
+    font-size: 35px;
+  }
+  .over-board{
+    transform: scale(0.5);
+  }
+}
+@media(min-width:550px){
+  .hd{
+    font-size: 65px;
+  }
+  .over-board{
+    transform: scale(0.8);
+  }
+}
+
